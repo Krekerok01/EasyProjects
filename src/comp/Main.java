@@ -1,0 +1,15 @@
+package comp;
+
+public class Main {
+    public static void main(String[] args) {
+        Computer computer = new Computer(new Keyboard(), new Mouse(), new Monitor());
+        if(isWork(computer.getKeyboard()) && isWork(computer.getMouse()) && isWork(computer.getMonitor())){
+            System.out.println("Work!!!");
+        }
+    }
+
+    public static boolean isWork(CompItem item) {
+        System.out.println(item.getName());
+        return item.getName() != null && item.getName().length() > 4;
+    }
+}
